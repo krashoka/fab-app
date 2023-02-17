@@ -1,0 +1,81 @@
+.header_card{
+    margin-top: 30px;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 6px, rgba(0, 0, 0, 0.5) 0px 0px 0px;
+    padding: 5px 0px 10px;
+}
+
+.signupImg{
+    width: 100%;
+}
+
+.signupImg > img{
+    height: 200px;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.create{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+p{
+    padding: 0 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.mobNumber{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    color: #484848;
+    font-size: 12px;
+    margin: 30px 20px;
+}
+
+.password{
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    height: 45px;
+    color: #484848;
+    font-size: 12px;
+    margin: 30px 20px 0;
+}
+
+.countryCode{
+    border-right: 1px solid #eee;
+    padding: 0 10px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signinBtn{
+    margin: 0 20px;
+    font-size: 12px;
+    text-transform: none;
+    background-color: #e30b1c;
+    border-radius: 5px;
+}
+
+.termsAndConditions{
+    color: #e30b1c;
+    text-decoration: underline;
+}
+
+.footerText{
+    font-size: 12px;
+}
+
+.footerText > p{
+    margin: 25px 0;
+}

@@ -1,0 +1,164 @@
+<ion-content>
+  <ion-card class="stickyAds">
+    <ion-icon name="arrow-back"></ion-icon>
+    <div>
+      <ion-icon class="header_icon" name="search"></ion-icon>
+      <ion-icon class="header_icon" name="notifications"></ion-icon>
+    </div>
+  </ion-card>
+
+  <ion-label class="navigation">Home > Real Estate</ion-label>
+
+  <ion-card class="stickyAds">
+    <ion-label>You have 25555 Real Estate in all cities</ion-label>
+    <div id="chngProdView"><ion-icon name="list"></ion-icon></div>
+  </ion-card>
+
+  <!-- tabs scroll code here -->
+  <ion-slides [options]="option">
+    <ion-slide>
+      <div class="tabsSlide">
+        <ion-label>Properties for rent</ion-label>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="tabsSlide">
+        <ion-label>Properties for rent</ion-label>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="tabsSlide">
+        <ion-label>Properties for rent</ion-label>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="tabsSlide">
+        <ion-label>Properties for rent</ion-label>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- infinite scroll tabs -->
+  <ion-content style="margin: 0 10px 50px">
+    <ion-list>
+      <div class="productDisplay" *ngFor="let item of items; let index">
+        <div class="adsCrousel" routerLink="/product-details">
+          <div class="adsBorder">
+            <div class="prodImgAndDetails">
+              <div class="prodImage">
+                <img class="imgHeight" src="assets/images/crousel_img1.jpeg" />
+              </div>
+
+              <div class="productDetails">
+                <div class="dayAndHeart">
+                  <ion-label>2 days ago</ion-label>
+                  <ion-icon name="heart-outline"></ion-icon>
+                </div>
+                <p class="adsTitle">Easy to disassemble and install</p>
+                <div class="adsPrice">
+                  <ion-label>2500</ion-label>
+                  <ion-label class="currency">AED</ion-label>
+                </div>
+              </div>
+            </div>
+
+            <div class="adsButton">
+              <div class="callBtn">
+                <ion-icon name="call"></ion-icon>
+              </div>
+              <div class="whatsappBtn">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="adsCrousel">
+          <div class="adsBorder">
+            <div class="prodImgAndDetails">
+              <div class="prodImage">
+                <img class="imgHeight" src="assets/images/crousel_img1.jpeg" />
+              </div>
+
+              <div class="productDetails">
+                <div class="dayAndHeart">
+                  <ion-label>4 days ago</ion-label>
+                  <ion-icon name="heart-outline"></ion-icon>
+                </div>
+                <p class="adsTitle">Easy to disassemble and install</p>
+                <div class="adsPrice">
+                  <ion-label>50000</ion-label>
+                  <ion-label class="currency">AED</ion-label>
+                </div>
+              </div>
+            </div>
+
+            <div class="adsButton">
+              <div class="callBtn">
+                <ion-icon name="call"></ion-icon>
+              </div>
+              <div class="whatsappBtn">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-list>
+
+    <ion-infinite-scroll>
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+      ></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-content>
+
+  <!-- Footer Section -->
+  <ion-footer>
+    <div class="footerIcons">
+      <div>
+        <div>
+          <ion-icon name="home"></ion-icon>
+        </div>
+        <p class="icon_title">Home</p>
+      </div>
+
+      <div>
+        <div>
+          <ion-icon name="person-circle"></ion-icon>
+        </div>
+        <p class="icon_title">My account</p>
+      </div>
+
+      <div id="addButton">
+        <div id="addIcon">
+          <ion-icon name="close-outline" color="light"></ion-icon>
+        </div>
+        <p class="icon_title" style="padding-top: 20px">Add your ad</p>
+      </div>
+
+      <div>
+        <div>
+          <ion-icon name="chatbubbles"></ion-icon>
+        </div>
+        <p class="icon_title">Chats</p>
+      </div>
+
+      <div>
+        <div>
+          <ion-icon name="menu"></ion-icon>
+        </div>
+        <p class="icon_title">More</p>
+      </div>
+    </div>
+  </ion-footer>
+
+  <ion-fab
+    slot="fixed"
+    vertical="bottom"
+    horizontal="end"
+    id="floatingChatIcon"
+  >
+    <ion-icon name="chatbubble"></ion-icon>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-content>
+  <ion-card class="advertisement">
+    <ion-label class="adTitle">Add new advertisement</ion-label>
+    <ion-card-content class="cancelAd">
+      <ion-label>Back</ion-label>
+      <ion-icon class="cancelIcon" name="chevron-forward"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="navigationBar">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- -------- Categories Section -------- -->
+  <ion-card class="categories">
+    <ion-card-header>
+      <ion-card-title class="catTitle">Personal Information</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="selectOption">
+      <ion-text>Phone Number</ion-text>
+      <div class="mobNumber">
+        <ion-text class="countryCode">+971</ion-text>
+        <ion-input
+          type="number"
+          placeholder="Enter a mobile number"
+        ></ion-input>
+      </div>
+      <ion-text>City</ion-text>
+      <ion-text>Area</ion-text>
+
+      <ion-button class="nextBtn" color="danger" expand="block"
+        >Post my Ad</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
+
+  <!-- ------------ FOOTER Section --------- -->
+  <ion-fab
+    slot="fixed"
+    vertical="bottom"
+    horizontal="end"
+    id="floatingChatIcon"
+  >
+    <ion-icon name="chatbubble"></ion-icon>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,339 @@
+.stickyAds{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding: 20px 0;
+    box-shadow: none;
+    text-align: left;
+    color: #212529;
+    margin-bottom: 0;
+    ion-icon{
+      font-size:20px;
+      color: #212529;
+    }
+
+    ion-label{
+        font-size: 12px;
+        padding: 0 !important;
+        font-weight: 200;
+    }
+}
+
+.header_icon{
+    font-size: 20px !important;
+    padding: 0 5px;
+    color: #212529;
+}
+
+.navigationProd{
+    font-size: 11px;
+    padding: 0px 10px;
+    text-align: left;
+    line-height: 0.8rem;
+    color: #1D76DE;
+}
+
+
+// ************* Image ***********
+
+.imgProd{
+    width: 100% !important;
+    // height: 180px;
+    object-fit: fill;
+}
+
+// *************** Product Title **********
+.productTitle{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.adsTitle{
+    margin:0;
+    padding-right: 10px;
+    color:#343a40;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3rem;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.currency{
+    font-size: 14px;
+}
+
+.days{
+    color: #6c757d;
+    padding: 0 10px;
+    font-size: 10px;
+}
+
+.location{
+    background-color: #f5f5f5;
+    padding: 3px 0.875rem;
+    font-size: 14px;
+    color: #484848;
+    width:auto;
+    font-weight: normal;
+    border-radius: 10rem;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.location > ion-icon{
+    font-size: 22px;
+}
+
+.prodDescription{
+    background-color: #faf5f5;
+    padding: 8px 0.875rem;
+    font-size: 12px;
+    color: #484848;
+    width:100%;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.prodAttribute{
+    width: 50%;
+    font-size: 13px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.prodValue{
+    width: 50%;
+    margin: 0;
+}
+
+// ********* product description ***********
+.descLang{
+    font-size: 13px; 
+    font-weight: 700;
+}
+
+.details{
+    font-size: 12px; 
+    line-height: 1rem;
+}
+
+.read{
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.read > div{
+    display: flex;
+    align-items: center;
+}
+
+.read > div > .caret{
+    font-size: 16px;
+    color:#e30b1c;
+}
+
+.readBtn{
+    padding: 5px 0 5px 5px;
+    color:#e30b1c;
+    font-weight: 600;
+    background-color: #fff;
+}
+
+/////////// Report Abuse ////////////
+.abuseDiv{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #484848;
+    border-top: 1px solid #dee2e6 ;
+    border-bottom: 1px solid #dee2e6 ;
+    margin: 20px 0;
+}
+
+.abuseDiv > button, .flag{
+    color: #484848;
+    font-size: 15px;
+    background-color: #fff;
+    font-weight: 700;
+    padding: 3px;
+}
+
+
+// ///////// Comment Styling /////////////
+.comment{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.addComment{
+    border: 2px solid #dee2e6;
+    border-radius: 5px;
+    font-size: 11px;
+    margin: 30px 0 10px;
+}
+
+.addComment:focus{
+    border: 2px solid #7dbeff;
+}
+
+.addCommentBtn{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.addCommentBtn > button{
+    background-color: #e30b1c;
+    color: #fff;
+    font-size: 12px;
+    padding: 18px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+
+// ////////////// Crousel Styling //////////
+
+.adsCrousel{
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    
+    .adsBorder{
+      border:1px solid #6c757d;
+    }
+  }
+  
+  .dayAndHeart{
+    display: flex;
+    justify-content: space-between;
+    color: #6c757d;
+    padding: 8px 5px;
+    font-size: 10px;
+  
+    ion-icon{
+      font-size: 14px;
+    }
+  }
+  
+  .adsTitle{
+    color:#343a40;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 5px;
+  }
+  
+  .adsPrice{
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    padding: 10px 5px;
+  }
+  
+  .currency{
+    color: #6c757d;
+    padding-left: 3px;
+    font-size: 9px;
+  }
+  
+  .adsButton{
+    display: flex;
+    width: 100%;
+  }
+  
+  .callBtn{
+    width: 50%;
+    border: 1px solid #6c757d;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 5px 0;
+    margin: auto;
+    color: #007bff;;
+  }
+  
+  .whatsappBtn{
+    width: 50%;
+    border: 1px solid #6c757d;
+    border-right: 0px;
+    border-bottom: 0px;
+    padding: 5px 0;
+    margin: auto;
+    color: #28a745;;
+  }
+  
+  .imgHeight{
+    height: 100px;
+    object-fit:inherit;
+  }
+  
+
+ 
+
+  /********** FOOTER Section *****************/
+  .callIcon{
+    color: #007bff;
+    font-size: 18px;
+  }
+
+  // .whatsapp{
+  //   color: #28a745;
+  //   font-size: 18px;
+  // }
+
+  .contact{
+    font-size: 13px;
+    color: #484848;
+  }
+
+  .footerDiv{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    position:fixed;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1000;
+  }
+
+  .footerDiv > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 50%;
+    padding: 10px 20px;
+    border:1px solid #faf5f5;
+  }
+
+   // *********** Floating Chat Icon
+  #floatingChatIcon{
+    margin: 33px 10px; 
+    position: fixed; 
+    background-color: #D90036; 
+    color: #fff;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
