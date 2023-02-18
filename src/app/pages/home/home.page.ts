@@ -15,4 +15,12 @@ export class HomePage {
     spaceBetween: 2,
     autoplay:true,
   }
+
+  option2 = {
+    slidesPerView: 4,
+    // centeredSlides: true,
+    loop: true,
+    spaceBetween: 40,
+    autoplay:true,
+  }
 }
