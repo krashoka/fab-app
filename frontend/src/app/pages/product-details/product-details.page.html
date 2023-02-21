@@ -1,0 +1,169 @@
+<ion-content>
+  <ion-card class="stickyAds">
+    <ion-icon name="arrow-back"></ion-icon>
+    <div>
+      <ion-icon class="header_icon" name="share-social"></ion-icon>
+      <ion-icon class="header_icon" name="heart-outline"></ion-icon>
+    </div>
+  </ion-card>
+
+  <!-- Image -->
+  <img class="imgProd" src="../../../assets/images/pool.jpg" />
+
+  <p class="navigationProd">
+    Home > Real Estate > Properties For Rent > Residential / investment > Villas
+    / Houses
+  </p>
+
+  <div class="productTitle">
+    <p class="adsTitle">Villa for rent south of Al Shamkha</p>
+    <div>
+      <ion-label class="price">160000</ion-label>
+      <ion-label class="currency">AED</ion-label>
+    </div>
+  </div>
+
+  <p class="days">4 days ago</p>
+
+  <!-- ------ Location ------------- -->
+  <div class="location">
+    <ion-icon name="location-sharp"></ion-icon>
+    <ion-label>Abu Dhabi, Al Shamkha</ion-label>
+  </div>
+
+  <!-- Product Details -->
+  <div>
+    <div class="prodDescription">
+      <p class="prodAttribute">Bedrooms:</p>
+      <p class="prodValue">5</p>
+    </div>
+
+    <div class="prodDescription">
+      <p class="prodAttribute">Bedrooms:</p>
+      <p class="prodValue">5</p>
+    </div>
+  </div>
+
+  <!-- Produce Description -->
+  <div style="padding: 10px; color: #484848">
+    <p class="descLang">arabic Description</p>
+    <p class="details">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Est velit egestas dui
+      id. Duis ut diam quam nulla porttitor. Scelerisque varius morbi enim nunc
+      faucibus. Suspendisse faucibus interdum posuere lorem ipsum dolor sit
+      amet. Risus nullam eget felis eget nunc. Dolor sit amet consectetur
+      adipiscing elit pellentesque habitant. Massa eget egestas purus viverra
+      accumsan in. Integer feugiat scelerisque varius morbi enim. Sodales ut
+      etiam sit amet nisl purus in mollis. Euismod elementum nisi quis eleifend
+      quam adipiscing. Posuere morbi leo urna molestie at elementum. Malesuada
+      proin libero nunc consequat interdum varius sit amet. Quis auctor elit sed
+      vulputate mi.
+    </p>
+  </div>
+  <div class="read">
+    <div>
+      <button class="readBtn">Read more</button>
+      <ion-icon class="caret" name="caret-down"></ion-icon>
+    </div>
+  </div>
+
+  <!-- ---------- Report Abuse ---------- -->
+  <!-- <div class="abuseDiv">
+    <ion-icon name="flag" class="flag"></ion-icon>
+    <button>Report Abuse</button>
+  </div> -->
+
+  <!-- ----------- Comment -------------- -->
+  <div style="margin: 50px 10px 20px">
+    <p class="comment">Comments</p>
+    <ion-textarea
+      class="addComment"
+      placeholder="Add a comment..."
+      type="text"
+      autoGrow="true"
+    ></ion-textarea>
+    <div class="addCommentBtn">
+      <button>Add comment</button>
+    </div>
+  </div>
+
+  <!-- ---------- Related Posts ------------- -->
+  <div style="margin: 20px 10px">
+    <p class="comment">Related Posts</p>
+  </div>
+
+  <!------------------------ SLIDER  ------------------>
+
+  <ion-slides [options]="option" style="margin-bottom: 60px">
+    <ion-slide>
+      <div class="adsCrousel">
+        <div class="adsBorder">
+          <img class="imgHeight" src="assets/images/crousel_img1.jpeg" />
+          <div class="dayAndHeart">
+            <ion-label>2 days ago</ion-label>
+            <ion-icon name="heart-outline"></ion-icon>
+          </div>
+          <p class="adsTitle">Easy to disassemble and install</p>
+          <div class="adsPrice">
+            <ion-label>2500</ion-label>
+            <ion-label class="currency">AED</ion-label>
+          </div>
+          <div class="adsButton">
+            <div class="callBtn">
+              <ion-icon name="call"></ion-icon>
+            </div>
+            <div class="whatsappBtn">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="adsCrousel">
+        <div class="adsBorder">
+          <img class="imgHeight" src="assets/images/crousel_img1.jpeg" />
+          <div class="dayAndHeart">
+            <ion-label>2 days ago</ion-label>
+            <ion-icon name="heart-outline"></ion-icon>
+          </div>
+          <p class="adsTitle">Easy to disassemble and install</p>
+          <div class="adsPrice">
+            <ion-label>2500</ion-label>
+            <ion-label class="currency">AED</ion-label>
+          </div>
+          <div class="adsButton">
+            <div class="callBtn">
+              <ion-icon name="call"></ion-icon>
+            </div>
+            <div class="whatsappBtn">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- --------- Footer Section -------- -->
+
+  <div class="footerDiv">
+    <div routerLink="/home">
+      <ion-icon class="callIcon" name="call"></ion-icon>
+      <ion-label class="contact">Call</ion-label>
+    </div>
+    <div>
+      <ion-img src="../../../assets/images/whatsapp.png"></ion-img>
+      <ion-label class="contact">whatsapp</ion-label>
+    </div>
+  </div>
+
+  <ion-fab
+    slot="fixed"
+    vertical="bottom"
+    horizontal="end"
+    id="floatingChatIcon"
+  >
+    <ion-icon name="chatbubble"></ion-icon>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,660 @@
+<ion-content>
+  <!-- Header for Large screen -->
+
+  <ion-card class="topNav">
+    <ion-card class="innerTopNav">
+      <ion-img
+        class="langImg"
+        src="../../../assets/images/arabicLang.png"
+      ></ion-img>
+      <div class="topMenu">
+        <div>
+          <div>
+            <ion-icon name="person-circle"></ion-icon>
+          </div>
+          <p class="topMenu_icon_title">My account</p>
+        </div>
+        <div>
+          <div>
+            <ion-icon name="notifications"></ion-icon>
+          </div>
+          <p class="topMenu_icon_title">Notification</p>
+        </div>
+      </div>
+    </ion-card>
+
+    <ion-card class="mainNav">
+      <div class="logo">
+        <ion-img
+          class="websiteTitle"
+          src="../../../assets/images/fabLogo.png"
+        ></ion-img>
+      </div>
+      <div class="menu home">Home Page</div>
+      <div class="menu" (click)="goToStickyAds()">Sticky Ads</div>
+      <div class="menu" (click)="goToCommercialAds()">Commercials Ads</div>
+    </ion-card>
+  </ion-card>
+
+  <!------------------------------>
+  <ion-card class="ion-no-margin header_card">
+    <ion-card-header>
+      <ion-img
+        id="fabLogoImg"
+        src="../../../assets/images/fabLogo.png"
+      ></ion-img>
+      <div>
+        <ion-icon
+          class="header_icon"
+          name="search"
+          (click)="goToStickyAds()"
+        ></ion-icon>
+        <ion-icon class="header_icon" name="notifications"></ion-icon>
+      </div>
+    </ion-card-header>
+    <div id="header_tabs">
+      <div class="homeMob" id="homePageTab">Home Page</div>
+      <div id="commercialTab">Commercial ads</div>
+    </div>
+  </ion-card>
+
+  <!-- ---------- Crousel --------- -->
+  <div id="homeTab">
+    <div class="crousel">
+      <ion-slides [options]="option" class="topCrousel">
+        <ion-slide>
+          <ion-card>
+            <img src="assets/images/crousel_img1.jpeg" />
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/images/crousel_img2.jpeg" />
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/images/crousel_img3.jpeg" />
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+
+      <!------------  SEARCH SECTION ------------>
+      <ion-card class="search">
+        <div class="searchTitle">
+          <ion-icon class="searchIcon" name="search"></ion-icon>
+          <ion-text>Search in FaB</ion-text>
+        </div>
+        <div class="searchFor">
+          <ion-input placeholder="Search For..." />
+          <ion-icon class="searchIcon" name="search"></ion-icon>
+        </div>
+
+        <ion-select
+          interface="popover"
+          class="selectCategory"
+          placeholder="Category"
+        >
+          <ion-select-option>fasdf</ion-select-option>
+          <ion-select-option>fasdf</ion-select-option>
+          <ion-select-option>fasdf</ion-select-option>
+        </ion-select>
+
+        <ion-select
+          interface="popover"
+          class="selectCategory"
+          placeholder="City"
+        >
+          <ion-select-option>fasdf</ion-select-option>
+          <ion-select-option>fasdf</ion-select-option>
+          <ion-select-option>fasdf</ion-select-option>
+        </ion-select>
+        <div class="searchBtn">Search</div>
+      </ion-card>
+    </div>
+
+    <div class="grid">
+      <div>
+        <ion-card class="icons">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-card>
+        <p class="icon_title">Real estate</p>
+      </div>
+
+      <div>
+        <ion-card class="icons">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-card>
+        <p class="icon_title">Real estate</p>
+      </div>
+
+      <div>
+        <ion-card class="icons">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-card>
+        <p class="icon_title">Real estate</p>
+      </div>
+
+      <div>
+        <ion-card class="icons">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-card>
+        <p class="icon_title">Real estate</p>
+      </div>
+
+      <div>
+        <ion-card class="icons">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-card>
+        <p class="icon_title">Real estate</p>
+      </div>
+
+      <div>
+        <ion-card class="icons">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-card>
+        <p class="icon_title">Real estate</p>
+      </div>
+    </div>
+  </div>
+  <!-- ------- COMMERCIAL ADS SECTION --------- -->
+  <div class="commercial">
+    <ion-card class="commercialAdsTitle">
+      <div>
+        <ion-icon style="font-size: 28px" name="megaphone"></ion-icon>
+        <ion-text>Commercials Ads</ion-text>
+      </div>
+      <div
+        style="color: #007bff; cursor: pointer"
+        (click)="goToCommercialAds()"
+      >
+        <ion-text>Read More</ion-text>
+        <ion-icon style="font-size: 24px" name="chevron-forward"></ion-icon>
+      </div>
+    </ion-card>
+
+    <ion-slides [options]="option2" class="commercialSlide">
+      <ion-slide>
+        <ion-card>
+          <img src="assets/images/crousel_img1.jpeg" />
+          <div class="contactCommercial">
+            <div style="border-right: 1px solid #dcdcdc">
+              <ion-text>WhatsApp</ion-text>
+              <ion-img
+                class="whatsapp"
+                src="../../../assets/images/whatsapp.png"
+              />
+            </div>
+            <div>
+              <ion-text>Call</ion-text>
+              <ion-icon name="call" class="call"></ion-icon>
+            </div>
+          </div>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/images/crousel_img2.jpeg" />
+          <div class="contactCommercial">
+            <div style="border-right: 1px solid #dcdcdc">
+              <ion-text>WhatsApp</ion-text>
+              <ion-img
+                class="whatsapp"
+                src="../../../assets/images/whatsapp.png"
+              />
+            </div>
+            <div>
+              <ion-text>Call</ion-text>
+              <ion-icon name="call" class="call"></ion-icon>
+            </div>
+          </div>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/images/crousel_img3.jpeg" />
+          <div class="contactCommercial">
+            <div style="border-right: 1px solid #dcdcdc">
+              <ion-text>WhatsApp</ion-text>
+              <ion-img
+                class="whatsapp"
+                src="../../../assets/images/whatsapp.png"
+              />
+            </div>
+            <div>
+              <ion-text>Call</ion-text>
+              <ion-icon name="call" class="call"></ion-icon>
+            </div>
+          </div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/images/crousel_img3.jpeg" />
+          <div class="contactCommercial">
+            <div style="border-right: 1px solid #dcdcdc">
+              <ion-text>WhatsApp</ion-text>
+              <ion-img
+                class="whatsapp"
+                src="../../../assets/images/whatsapp.png"
+              />
+            </div>
+            <div>
+              <ion-text>Call</ion-text>
+              <ion-icon name="call" class="call"></ion-icon>
+            </div>
+          </div>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <!-- ---------- STICKY ADS for Desktop -------------- -->
+  <div class="commercial">
+    <ion-card class="commercialAdsTitle">
+      <div>
+        <ion-icon style="font-size: 28px" name="flash"></ion-icon>
+        <ion-text>Sticky Ads</ion-text>
+      </div>
+      <div style="color: #007bff; cursor: pointer" (click)="goToStickyAds()">
+        <ion-text>Read More</ion-text>
+        <ion-icon style="font-size: 28px" name="chevron-forward"></ion-icon>
+      </div>
+    </ion-card>
+
+    <ion-slides [options]="option2" class="stickySlide">
+      <ion-slide>
+        <ion-card>
+          <img src="assets/images/crousel_img1.jpeg" />
+          <div class="stickyContentHeight">
+            <div class="dayAndHeart">
+              <div>
+                <ion-label>2 days ago</ion-label>
+                <ion-label class="locationSticky">Abu Dhabi</ion-label>
+              </div>
+
+              <ion-icon class="heart" name="heart-outline"></ion-icon>
+            </div>
+            <p class="adsTitle">Easy to disassemble and install</p>
+            <div class="adsPrice">
+              <ion-label>25000</ion-label>
+              <ion-label class="currency">AED</ion-label>
+            </div>
+          </div>
+          <div class="contactSticky">
+            <div style="border-right: 1px solid #dcdcdc">
+              <ion-icon name="call" class="call"></ion-icon>
+            </div>
+            <div>
+              <ion-img
+                class="whatsapp"
+                src="../../../assets/images/whatsapp.png"
+              />
+            </div>
+          </div>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/images/crousel_img1.jpeg" />
+          <div class="stickyContentHeight">
+            <div class="dayAndHeart">
+              <div>
+                <ion-label>2 days ago</ion-label>
+                <ion-label class="locationSticky">Abu Dhabi</ion-label>
+              </div>
+
+              <ion-icon class="heart" name="heart-outline"></ion-icon>
+            </div>
+            <p class="adsTitle">Easy to disassemble and install</p>
+            <div class="adsPrice">
+              <ion-label>25000</ion-label>
+              <ion-label class="currency">AED</ion-label>
+            </div>
+          </div>
+          <div class="contactSticky">
+            <div style="border-right: 1px solid #dcdcdc">
+              <ion-icon name="call" class="call"></ion-icon>
+            </div>
+            <div>
+              <ion-img
+                class="whatsapp"
+                src="../../../assets/images/whatsapp.png"
+              />
+            </div>
+          </div>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/images/crousel_img1.jpeg" />
+          <div class="stickyContentHeight">
+            <div class="dayAndHeart">
+              <div>
+                <ion-label>2 days ago</ion-label>
+                <ion-label class="locationSticky">Abu Dhabi</ion-label>
+              </div>
+
+              <ion-icon class="heart" name="heart-outline"></ion-icon>
+            </div>
+            <p class="adsTitle">Easy to disassemble and install</p>
+            <div class="adsPrice">
+              <ion-label>25000</ion-label>
+              <ion-label class="currency">AED</ion-label>
+            </div>
+          </div>
+          <div class="contactSticky">
+            <div style="border-right: 1px solid #dcdcdc">
+              <ion-icon name="call" class="call"></ion-icon>
+            </div>
+            <div>
+              <ion-img
+                class="whatsapp"
+                src="../../../assets/images/whatsapp.png"
+              />
+            </div>
+          </div>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/images/crousel_img1.jpeg" />
+          <div class="stickyContentHeight">
+            <div class="dayAndHeart">
+              <div>
+                <ion-label>2 days ago</ion-label>
+                <ion-label class="locationSticky">Abu Dhabi</ion-label>
+              </div>
+
+              <ion-icon class="heart" name="heart-outline"></ion-icon>
+            </div>
+            <p class="adsTitle">Easy to disassemble and install</p>
+            <div class="adsPrice">
+              <ion-label>25000</ion-label>
+              <ion-label class="currency">AED</ion-label>
+            </div>
+          </div>
+          <div class="contactSticky">
+            <div style="border-right: 1px solid #dcdcdc">
+              <ion-icon name="call" class="call"></ion-icon>
+            </div>
+            <div>
+              <ion-img
+                class="whatsapp"
+                src="../../../assets/images/whatsapp.png"
+              />
+            </div>
+          </div>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <!-- --------- Sticky Ads for Mobile --------- -->
+  <div id="stickyTab">
+    <ion-card id="stickyAds">
+      <ion-label>Sticky Ads</ion-label>
+      <ion-icon
+        name="arrow-forward-outline"
+        (click)="goToStickyAds()"
+      ></ion-icon>
+    </ion-card>
+
+    <!------------------------ SLIDER  ------------------>
+
+    <ion-slides
+      [options]="option"
+      style="margin-bottom: 60px"
+      id="stickySlider"
+    >
+      <ion-slide>
+        <div class="adsCrousel">
+          <div class="adsBorder">
+            <img class="imgHeight" src="assets/images/crousel_img1.jpeg" />
+            <div class="dayAndHeart">
+              <ion-label>2 days ago</ion-label>
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <p class="adsTitle">Easy to disassemble and install</p>
+            <div class="adsPrice">
+              <ion-label>2500</ion-label>
+              <ion-label class="currency">AED</ion-label>
+            </div>
+            <div class="adsButton">
+              <div class="callBtn">
+                <ion-icon name="call"></ion-icon>
+              </div>
+              <div class="whatsappBtn">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="adsCrousel">
+          <div class="adsBorder">
+            <img class="imgHeight" src="assets/images/crousel_img1.jpeg" />
+            <div class="dayAndHeart">
+              <ion-label>2 days ago</ion-label>
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <p class="adsTitle">Easy to disassemble and install</p>
+            <div class="adsPrice">
+              <ion-label>2500</ion-label>
+              <ion-label class="currency">AED</ion-label>
+            </div>
+            <div class="adsButton">
+              <div class="callBtn">
+                <ion-icon name="call"></ion-icon>
+              </div>
+              <div class="whatsappBtn">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <!-- --------- Commercial Ads for Mobile ---------- -->
+
+  <div class="commercialTabDisplay" id="commercialTabSection">
+    <div class="navigationText">
+      <p class="stickyCatTitle">You have 5 commercial ads</p>
+    </div>
+
+    <!-- tabs scroll code here -->
+    <div class="tabs">
+      <ion-label
+        class="tabsSlide"
+        style="background-color: #e30b1c; color: #fff"
+        >All</ion-label
+      >
+      <ion-label class="tabsSlide">Mix ads</ion-label>
+      <ion-label class="tabsSlide">Real Estate property</ion-label>
+      <ion-label class="tabsSlide">Moving furniture</ion-label>
+      <ion-label class="tabsSlide">Clean and sterilize</ion-label>
+      <ion-label class="tabsSlide">Services</ion-label>
+    </div>
+
+    <!-- ------------------ Commercial Ads -------------- -->
+    <div class="commercialAdsDisplay">
+      <ion-card>
+        <div>
+          <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
+        </div>
+        <div class="contactCommercial">
+          <div style="border-right: 1px solid #dcdcdc">
+            <ion-icon name="call" class="call"></ion-icon>
+          </div>
+          <div>
+            <ion-img
+              class="whatsapp"
+              src="../../../assets/images/whatsapp.png"
+            />
+          </div>
+        </div>
+      </ion-card>
+
+      <ion-card>
+        <div>
+          <img class="commercialImg" src="assets/images/commerceImg.jpeg" />
+        </div>
+        <div class="contactCommercial">
+          <div style="border-right: 1px solid #dcdcdc">
+            <ion-icon name="call" class="call"></ion-icon>
+          </div>
+          <div>
+            <ion-img
+              class="whatsapp"
+              src="../../../assets/images/whatsapp.png"
+            />
+          </div>
+        </div>
+      </ion-card>
+
+      <ion-card>
+        <div>
+          <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
+        </div>
+        <div class="contactCommercial">
+          <div style="border-right: 1px solid #dcdcdc">
+            <ion-icon name="call" class="call"></ion-icon>
+          </div>
+          <div>
+            <ion-img
+              class="whatsapp"
+              src="../../../assets/images/whatsapp.png"
+            />
+          </div>
+        </div>
+      </ion-card>
+
+      <ion-card>
+        <div>
+          <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
+        </div>
+        <div class="contactCommercial">
+          <div style="border-right: 1px solid #dcdcdc">
+            <ion-icon name="call" class="call"></ion-icon>
+          </div>
+          <div>
+            <ion-img
+              class="whatsapp"
+              src="../../../assets/images/whatsapp.png"
+            />
+          </div>
+        </div>
+      </ion-card>
+
+      <ion-card>
+        <div>
+          <img class="commercialImg" src="assets/images/commerceImg.jpeg" />
+        </div>
+        <div class="contactCommercial">
+          <div style="border-right: 1px solid #dcdcdc">
+            <ion-icon name="call" class="call"></ion-icon>
+          </div>
+          <div>
+            <ion-img
+              class="whatsapp"
+              src="../../../assets/images/whatsapp.png"
+            />
+          </div>
+        </div>
+      </ion-card>
+
+      <ion-card>
+        <div>
+          <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
+        </div>
+        <div class="contactCommercial">
+          <div style="border-right: 1px solid #dcdcdc">
+            <ion-icon name="call" class="call"></ion-icon>
+          </div>
+          <div>
+            <ion-img
+              class="whatsapp"
+              src="../../../assets/images/whatsapp.png"
+            />
+          </div>
+        </div>
+      </ion-card>
+
+      <ion-card>
+        <div>
+          <img class="commercialImg" src="assets/images/commerceImg.jpeg" />
+        </div>
+        <div class="contactCommercial">
+          <div style="border-right: 1px solid #dcdcdc">
+            <ion-icon name="call" class="call"></ion-icon>
+          </div>
+          <div>
+            <ion-img
+              class="whatsapp"
+              src="../../../assets/images/whatsapp.png"
+            />
+          </div>
+        </div>
+      </ion-card>
+    </div>
+  </div>
+  <!-- ----------------------------------------------- -->
+
+  <!-- Footer Section -->
+  <ion-footer id="footerMob">
+    <div class="footerIcons">
+      <div>
+        <div>
+          <ion-icon name="home"></ion-icon>
+        </div>
+        <p class="icon_title">Home</p>
+      </div>
+
+      <div>
+        <div>
+          <ion-icon name="person-circle"></ion-icon>
+        </div>
+        <p class="icon_title">My account</p>
+      </div>
+
+      <div id="addButton">
+        <div id="addIcon" routerLink="/signup">
+          <ion-icon name="close-outline" color="light"></ion-icon>
+        </div>
+        <p class="icon_title" style="padding-top: 20px">Add your ad</p>
+      </div>
+
+      <div>
+        <div>
+          <ion-icon name="chatbubbles"></ion-icon>
+        </div>
+        <p class="icon_title">Chats</p>
+      </div>
+
+      <div>
+        <div>
+          <ion-icon name="menu"></ion-icon>
+        </div>
+        <p class="icon_title">More</p>
+      </div>
+    </div>
+  </ion-footer>
+
+  <ion-fab
+    slot="fixed"
+    vertical="bottom"
+    horizontal="end"
+    id="floatingChatIcon"
+  >
+    <ion-icon name="chatbubble" routerLink="/products"></ion-icon>
+  </ion-fab>
+</ion-content>

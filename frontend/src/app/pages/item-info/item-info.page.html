@@ -1,0 +1,50 @@
+<ion-content>
+  <ion-card style="box-shadow: none !important">
+    <ion-card-header>
+      <ion-card-title class="advertisement">
+        Add Ads
+        <div class="cancelAd">
+          <ion-label>Cancel</ion-label>
+          <ion-icon class="cancelIcon" name="close-outline"></ion-icon>
+        </div>
+      </ion-card-title>
+    </ion-card-header>
+    <!-- <ion-label class="adTitle">Add new advertisement</ion-label> -->
+  </ion-card>
+
+  <div class="navigationBar">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- -------- Categories Section -------- -->
+  <ion-card class="categories">
+    <ion-card-header>
+      <ion-card-title class="catTitle">Real Estate</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="selectOption">
+      <ion-text>Size of real estate</ion-text>
+      <select #mySelect></select>
+
+      <div class="nextBtn">
+        <ion-button color="danger" class="btn" expand="block" routerLink="/home"
+          >Next Step</ion-button
+        >
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- ------------ FOOTER Section --------- -->
+  <ion-fab
+    slot="fixed"
+    vertical="bottom"
+    horizontal="end"
+    id="floatingChatIcon"
+  >
+    <ion-icon name="chatbubble"></ion-icon>
+  </ion-fab>
+</ion-content>
