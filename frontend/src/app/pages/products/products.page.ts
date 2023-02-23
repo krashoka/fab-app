@@ -24,6 +24,10 @@ export class ProductsPage implements OnInit {
     this.navCtrl.back();
   }
 
+  goToAddNewAd(){
+    this.router.navigate(['add-new-advertisement']);  
+  }
+
   option = {
     slidesPerView: 2,
     // centeredSlides: true,

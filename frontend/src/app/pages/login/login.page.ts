@@ -8,8 +8,14 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  
+  mobNumber: any;
+  password: any;
+
   constructor(private router: Router) { }
+
+  loginUser(){
+    console.log(this.mobNumber, this.password)
+  }
 
   goToHome() {  
     this.router.navigate(['home']);  

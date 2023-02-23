@@ -33,7 +33,6 @@ $extra-large-screen: 1200px;
   #fabLogoImg {
     width: 70px;
     height: 40px;
-    cursor: pointer;
   }
 
   .signupImg {
@@ -100,6 +99,13 @@ $extra-large-screen: 1200px;
     border-radius: 5px;
   }
 
+  .forgotPassword {
+    text-decoration: underline;
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+
   .signinDifficulty {
     color: #e30b1c;
     text-decoration: underline;
@@ -134,6 +140,7 @@ $extra-large-screen: 1200px;
     gap: 5px;
     font-size: 14px;
     color: #007bff;
+    cursor: pointer;
   }
 
   #fabLogoImg {
@@ -230,6 +237,12 @@ $extra-large-screen: 1200px;
     background-color: #e30b1c;
     border-radius: 5px;
     height: 60px;
+  }
+
+  .forgotPassword {
+    text-decoration: underline;
+    text-align: right;
+    cursor: pointer;
   }
 
   .footerText {

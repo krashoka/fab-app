@@ -28,17 +28,21 @@
         <ion-img
           class="websiteTitle"
           src="../../../assets/images/fabLogo.png"
+          (click)="goToHome()"
         ></ion-img>
       </div>
       <div class="menu" (click)="goToHome()">Home Page</div>
       <div class="menu" (click)="goToStickyAds()">Sticky Ads</div>
       <div class="menu commercialTab">Commercials Ads</div>
+      <div>
+        <div class="addNewAds" (click)="goToAddNewAd()">Add Your Ad Now</div>
+      </div>
     </ion-card>
   </ion-card>
   <!-- ------------------------------------------------ -->
 
   <ion-card class="commercialAds">
-    <ion-icon name="arrow-back"></ion-icon>
+    <ion-icon name="arrow-back" (click)="goBack()"></ion-icon>
     <div>
       <ion-icon class="header_icon" name="search"></ion-icon>
       <ion-icon class="header_icon" name="notifications"></ion-icon>

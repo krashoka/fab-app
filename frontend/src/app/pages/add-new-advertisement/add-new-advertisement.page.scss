@@ -6,8 +6,7 @@ $extra-large-screen: 1200px;
 @media (max-width: $small-screen) {
   /************* Hiding Elements in mobile view *******************/
   .topNav,
-  .search,
-  .commercial {
+  .adImg {
     display: none;
   }
 
@@ -145,6 +144,7 @@ $extra-large-screen: 1200px;
     width: 40px;
     height: 40px;
     border-radius: 3px;
+    cursor: pointer;
   }
 
   .topMenu {
@@ -159,6 +159,7 @@ $extra-large-screen: 1200px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .topMenu_icon_title {
@@ -185,7 +186,8 @@ $extra-large-screen: 1200px;
   }
 
   .mainNav > div {
-    padding: 20px 0px;
+    display: flex;
+    align-items: center;
     margin-bottom: 0;
     height: 60px;
   }
@@ -213,6 +215,21 @@ $extra-large-screen: 1200px;
     height: 60px;
     margin-right: 80px;
     padding: 0;
+    cursor: pointer;
+  }
+
+  .addNewAds {
+    background-color: #e30b1c;
+    height: 50px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
   }
 
   //********** Advertisement title *****
@@ -258,13 +275,28 @@ $extra-large-screen: 1200px;
     width: 20%;
   }
 
+  .adContent {
+    display: flex;
+    margin: 20px 0;
+    width: 88%;
+    margin: auto;
+  }
+
+  //************* Advertisement Img ************
+  .adImg {
+    width: 45%;
+  }
+  .adImg > img {
+    padding: 0 0 0 20px;
+  }
+
   //************ Categories Section ***********
   .categories {
-    margin: 20px 6%;
     padding: 35px 25px;
     border: 1px solid #d9d9d9;
     box-shadow: none !important;
     border-radius: 10px;
+    width: 55%;
   }
 
   .categoriesHeader {
@@ -280,25 +312,26 @@ $extra-large-screen: 1200px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 60px 0;
-    gap: 50px;
+    gap: 20px;
   }
 
   .grid > div {
     width: 100%;
-    height: 140px;
+    height: 120px;
     border: 1px solid #dcdcdc;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 45px;
+    font-size: 40px;
     color: #e30b1c;
     font-weight: 700;
     box-shadow: none !important;
@@ -324,5 +357,6 @@ $extra-large-screen: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 }

@@ -33,10 +33,15 @@
         <ion-input
           type="number"
           placeholder="Enter a mobile number"
+          [(ngModel)]="mobNumber"
         ></ion-input>
       </div>
 
-      <ion-button color="danger" expand="block" class="verifyBtn"
+      <ion-button
+        color="danger"
+        expand="block"
+        class="verifyBtn"
+        (click)="sendVerify()"
         >Send the verification code</ion-button
       >
     </div>

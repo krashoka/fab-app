@@ -33,6 +33,9 @@
       <div class="menu home">Home Page</div>
       <div class="menu" (click)="goToStickyAds()">Sticky Ads</div>
       <div class="menu" (click)="goToCommercialAds()">Commercials Ads</div>
+      <div>
+        <div class="addNewAds" (click)="goToAddNewAd()">Add Your Ad Now</div>
+      </div>
     </ion-card>
   </ion-card>
 
@@ -116,7 +119,7 @@
     </div>
 
     <div class="grid">
-      <div>
+      <div (click)="goToStickyAds()">
         <ion-card class="icons">
           <ion-icon name="home-outline"></ion-icon>
         </ion-card>
@@ -627,7 +630,7 @@
       </div>
 
       <div id="addButton">
-        <div id="addIcon" routerLink="/signup">
+        <div id="addIcon" (click)="goToAddNewAd()">
           <ion-icon name="close-outline" color="light"></ion-icon>
         </div>
         <p class="icon_title" style="padding-top: 20px">Add your ad</p>
@@ -655,6 +658,6 @@
     horizontal="end"
     id="floatingChatIcon"
   >
-    <ion-icon name="chatbubble" routerLink="/products"></ion-icon>
+    <ion-icon name="chatbubble" routerLink="/signup"></ion-icon>
   </ion-fab>
 </ion-content>

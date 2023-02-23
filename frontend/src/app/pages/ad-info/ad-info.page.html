@@ -1,46 +1,94 @@
 <ion-content>
+  <!-- Header for Large screen -->
+
+  <ion-card class="topNav">
+    <ion-card class="innerTopNav">
+      <ion-img
+        class="langImg"
+        src="../../../assets/images/arabicLang.png"
+      ></ion-img>
+      <div class="topMenu">
+        <div>
+          <div>
+            <ion-icon name="person-circle"></ion-icon>
+          </div>
+          <p class="topMenu_icon_title">My account</p>
+        </div>
+        <div>
+          <div>
+            <ion-icon name="notifications"></ion-icon>
+          </div>
+          <p class="topMenu_icon_title">Notification</p>
+        </div>
+      </div>
+    </ion-card>
+
+    <ion-card class="mainNav">
+      <div class="logo">
+        <ion-img
+          class="websiteTitle"
+          src="../../../assets/images/fabLogo.png"
+          (click)="goToHome()"
+        />
+      </div>
+      <div class="menu" (click)="goToHome()">Home Page</div>
+      <div class="menu" (click)="goToStickyAds()">Sticky Ads</div>
+      <div class="menu" (click)="goToCommercialAds()">Commercials Ads</div>
+      <div>
+        <div class="addNewAds" (click)="goToAddNewAd()">Add Your Ad Now</div>
+      </div>
+    </ion-card>
+  </ion-card>
+  <!-- ---------------------------------- -->
+
   <ion-card class="advertisement">
     <ion-label class="adTitle">Add new advertisement</ion-label>
-    <ion-card-content class="cancelAd">
-      <ion-label>Cancel</ion-label>
-      <ion-icon class="cancelIcon" name="close-outline"></ion-icon>
+    <ion-card-content class="cancelAd" (click)="goBack()">
+      <ion-label>Back</ion-label>
+      <ion-icon class="cancelIcon" name="chevron-forward"></ion-icon>
     </ion-card-content>
   </ion-card>
 
   <div class="navigationBar">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div style="background-color: #e30b1c"></div>
+    <div style="background-color: #e30b1c"></div>
+    <div style="background-color: #e30b1c"></div>
+    <div style="background-color: #e30b1c"></div>
     <div></div>
   </div>
 
   <!-- -------- Categories Section -------- -->
-  <ion-card class="categories">
-    <ion-card-header>
-      <ion-card-title class="catTitle">Ad Information</ion-card-title>
-    </ion-card-header>
+  <div class="adContent">
+    <ion-card class="categories">
+      <ion-card-header>
+        <ion-card-title class="catTitle">Ad Information</ion-card-title>
+      </ion-card-header>
 
-    <ion-card-content class="selectOption">
-      <ion-text>Ad title</ion-text>
-      <ion-input
-        type="text"
-        placeholder="Enter ad title"
-        class="inputAdTitle"
-      />
-      <ion-text>Ad Details</ion-text>
-      <ion-textarea
-        type="text"
-        autoGrow="true"
-        class="adDetails"
-        placeholder="Write here..."
-      />
+      <ion-card-content class="selectOption">
+        <ion-text>Ad title</ion-text>
+        <ion-input
+          type="text"
+          placeholder="Enter ad title"
+          class="inputAdTitle"
+        />
+        <ion-text>Ad Details</ion-text>
+        <ion-textarea
+          type="text"
+          autoGrow="true"
+          class="adDetails"
+          placeholder="Write here..."
+        />
 
-      <ion-button class="nextBtn" color="danger" expand="block"
-        >Next Step</ion-button
-      >
-    </ion-card-content>
-  </ion-card>
+        <ion-button class="nextBtn" color="danger" expand="block" (click)="goToPersonalInfo()"
+          >Next Step</ion-button
+        >
+      </ion-card-content>
+    </ion-card>
+
+    <div class="adImg">
+      <img src="../../../assets/images/advertisement.jpg" />
+    </div>
+  </div>
 
   <!-- ------------ FOOTER Section --------- -->
   <ion-fab

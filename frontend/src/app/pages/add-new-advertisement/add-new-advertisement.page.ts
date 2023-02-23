@@ -22,6 +22,14 @@ export class AddNewAdvertisementPage implements OnInit {
     this.router.navigate(['home']);  
   } 
 
+  goToCategories(){
+    this.router.navigate(['categories']);  
+  }
+
+  goToAddNewAd(){
+    this.router.navigate(['add-new-advertisement']);  
+  }
+
   ngOnInit() {
   }
 

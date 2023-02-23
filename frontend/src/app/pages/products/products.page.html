@@ -28,11 +28,15 @@
         <ion-img
           class="websiteTitle"
           src="../../../assets/images/fabLogo.png"
+          (click)="goToHome()"
         ></ion-img>
       </div>
       <div class="menu" (click)="goToHome()">Home Page</div>
       <div class="menu stickyTab">Sticky Ads</div>
       <div class="menu" (click)="goToCommercialAds()">Commercials Ads</div>
+      <div>
+        <div class="addNewAds" (click)="goToAddNewAd()">Add Your Ad Now</div>
+      </div>
     </ion-card>
   </ion-card>
   <!-- ------------------------------------------------ -->
@@ -61,7 +65,7 @@
 
   <ion-label class="navigation">Home > Real Estate</ion-label>
 
-  <div class="searchFor">
+  <div class="searchForMob">
     <ion-input placeholder="Search Keyword" />
     <ion-icon class="searchIcon" name="search"></ion-icon>
   </div>
@@ -79,7 +83,7 @@
   </div>
 
   <!-- infinite scroll tabs -->
-  <ion-content style="margin: 0 10px 50px">
+  <ion-content>
     <ion-list *ngFor="let item of items; let index">
       <div class="productDisplay">
         <div class="adsCrousel" routerLink="/product-details">

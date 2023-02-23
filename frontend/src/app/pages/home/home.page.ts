@@ -18,6 +18,11 @@ export class HomePage {
     this.router.navigate(['products']);  
   } 
 
+  goToAddNewAd(){
+    this.router.navigate(['add-new-advertisement']);  
+  }
+
+
   option = {
     slidesPerView: 1,
     centeredSlides: true,

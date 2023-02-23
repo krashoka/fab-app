@@ -29,6 +29,7 @@
         <ion-input
           type="number"
           placeholder="Enter a mobile number"
+          [(ngModel)]="mobNumber"
         ></ion-input>
       </div>
 
@@ -37,14 +38,20 @@
         <ion-text>Password</ion-text>
       </div>
       <div class="password">
-        <ion-input type="password" placeholder="Enter the password"></ion-input>
+        <ion-input
+          type="password"
+          [(ngModel)]="password"
+          placeholder="Enter the password"
+        ></ion-input>
       </div>
 
-      <p style="text-decoration: underline; text-align: right">
-        Forgot your password?
-      </p>
+      <p class="forgotPassword">Forgot your password?</p>
 
-      <ion-button color="danger" expand="block" class="signinBtn"
+      <ion-button
+        color="danger"
+        expand="block"
+        class="signinBtn"
+        (click)="loginUser()"
         >Sign in</ion-button
       >
     </div>
