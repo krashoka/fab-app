@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'; 
 import { HttpClient} from '@angular/common/http';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,7 @@ export class HomePage {
   
   categories: any = [];
 
-  constructor(private router: Router, public http: HttpClient, private sanitizer: DomSanitizer) { 
+  constructor(private router: Router, public http: HttpClient) { 
 
     this.http.get("http://localhost/fabapp/backend/crouselImg.php").subscribe((res: any) => {
         
@@ -51,9 +51,9 @@ export class HomePage {
     });
   }
 
-  sanitizeHtml(html: string): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(html);
-  }
+  // sanitizeHtml(html: string): SafeHtml {
+  //   return this.sanitizer.bypassSecurityTrustHtml(html);
+  // }
 
   goToCommercialAds() {  
     this.router.navigate(['commercialads']);  
