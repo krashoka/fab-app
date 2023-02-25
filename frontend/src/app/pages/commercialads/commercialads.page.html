@@ -69,93 +69,9 @@
 
   <!-- ------------------ Commercial Ads -------------- -->
   <div class="commercialAdsDisplay">
-    <ion-card>
+    <ion-card *ngFor="let images of commercialImageUrl">
       <div>
-        <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
-      </div>
-      <div class="contactCommercial">
-        <div style="border-right: 1px solid #dcdcdc">
-          <ion-icon name="call" class="call"></ion-icon>
-        </div>
-        <div>
-          <ion-img class="whatsapp" src="../../../assets/images/whatsapp.png" />
-        </div>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <div>
-        <img class="commercialImg" src="assets/images/commerceImg.jpeg" />
-      </div>
-      <div class="contactCommercial">
-        <div style="border-right: 1px solid #dcdcdc">
-          <ion-icon name="call" class="call"></ion-icon>
-        </div>
-        <div>
-          <ion-img class="whatsapp" src="../../../assets/images/whatsapp.png" />
-        </div>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <div>
-        <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
-      </div>
-      <div class="contactCommercial">
-        <div style="border-right: 1px solid #dcdcdc">
-          <ion-icon name="call" class="call"></ion-icon>
-        </div>
-        <div>
-          <ion-img class="whatsapp" src="../../../assets/images/whatsapp.png" />
-        </div>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <div>
-        <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
-      </div>
-      <div class="contactCommercial">
-        <div style="border-right: 1px solid #dcdcdc">
-          <ion-icon name="call" class="call"></ion-icon>
-        </div>
-        <div>
-          <ion-img class="whatsapp" src="../../../assets/images/whatsapp.png" />
-        </div>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <div>
-        <img class="commercialImg" src="assets/images/commerceImg.jpeg" />
-      </div>
-      <div class="contactCommercial">
-        <div style="border-right: 1px solid #dcdcdc">
-          <ion-icon name="call" class="call"></ion-icon>
-        </div>
-        <div>
-          <ion-img class="whatsapp" src="../../../assets/images/whatsapp.png" />
-        </div>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <div>
-        <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
-      </div>
-      <div class="contactCommercial">
-        <div style="border-right: 1px solid #dcdcdc">
-          <ion-icon name="call" class="call"></ion-icon>
-        </div>
-        <div>
-          <ion-img class="whatsapp" src="../../../assets/images/whatsapp.png" />
-        </div>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <div>
-        <img class="commercialImg" src="assets/images/commerceImg.jpeg" />
+        <img class="commercialImg" [src]="images" />
       </div>
       <div class="contactCommercial">
         <div style="border-right: 1px solid #dcdcdc">

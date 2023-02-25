@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';  
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-commercialads',
@@ -9,7 +10,18 @@ import { Router } from '@angular/router';
 })
 export class CommercialadsPage implements OnInit {
 
-  constructor(private router: Router, private navCtrl: NavController) { }
+  commercialImageUrl: string[] = [];
+
+  constructor(private router: Router, private navCtrl: NavController, public http: HttpClient) { 
+    // **************** For Commercial tab image *****************
+    this.http.get("http://localhost/fabapp/backend/commerceImg.php").subscribe((res: any) => {
+        
+      this.commercialImageUrl = res.map(imageName => 'http://localhost/fabapp/crouselimg/' + imageName);
+
+    },(error:any) => {
+      console.log("ErrorMessage: ", error)
+    });
+  }
 
   ngOnInit() {
   }

@@ -65,21 +65,9 @@
   <div id="homeTab">
     <div class="crousel">
       <ion-slides [options]="option" class="topCrousel">
-        <ion-slide>
+        <ion-slide *ngFor="let image of imageUrl">
           <ion-card>
-            <img src="assets/images/crousel_img1.jpeg" />
-          </ion-card>
-        </ion-slide>
-
-        <ion-slide>
-          <ion-card>
-            <img src="assets/images/crousel_img2.jpeg" />
-          </ion-card>
-        </ion-slide>
-
-        <ion-slide>
-          <ion-card>
-            <img src="assets/images/crousel_img3.jpeg" />
+            <img [src]="image" />
           </ion-card>
         </ion-slide>
       </ion-slides>
@@ -119,46 +107,9 @@
     </div>
 
     <div class="grid">
-      <div (click)="goToStickyAds()">
-        <ion-card class="icons">
-          <ion-icon name="home-outline"></ion-icon>
-        </ion-card>
-        <p class="icon_title">Real estate</p>
-      </div>
-
-      <div>
-        <ion-card class="icons">
-          <ion-icon name="home-outline"></ion-icon>
-        </ion-card>
-        <p class="icon_title">Real estate</p>
-      </div>
-
-      <div>
-        <ion-card class="icons">
-          <ion-icon name="home-outline"></ion-icon>
-        </ion-card>
-        <p class="icon_title">Real estate</p>
-      </div>
-
-      <div>
-        <ion-card class="icons">
-          <ion-icon name="home-outline"></ion-icon>
-        </ion-card>
-        <p class="icon_title">Real estate</p>
-      </div>
-
-      <div>
-        <ion-card class="icons">
-          <ion-icon name="home-outline"></ion-icon>
-        </ion-card>
-        <p class="icon_title">Real estate</p>
-      </div>
-
-      <div>
-        <ion-card class="icons">
-          <ion-icon name="home-outline"></ion-icon>
-        </ion-card>
-        <p class="icon_title">Real estate</p>
+      <div (click)="goToStickyAds()" *ngFor="let category of categories">
+        <ion-card class="icons" [innerHTML]="sanitizeHtml(category.ct_icon)"> </ion-card>
+        <p class="icon_title">{{ category.ct_icon_label }}</p>
       </div>
     </div>
   </div>
@@ -179,65 +130,9 @@
     </ion-card>
 
     <ion-slides [options]="option2" class="commercialSlide">
-      <ion-slide>
+      <ion-slide *ngFor="let image of imageUrl">
         <ion-card>
-          <img src="assets/images/crousel_img1.jpeg" />
-          <div class="contactCommercial">
-            <div style="border-right: 1px solid #dcdcdc">
-              <ion-text>WhatsApp</ion-text>
-              <ion-img
-                class="whatsapp"
-                src="../../../assets/images/whatsapp.png"
-              />
-            </div>
-            <div>
-              <ion-text>Call</ion-text>
-              <ion-icon name="call" class="call"></ion-icon>
-            </div>
-          </div>
-        </ion-card>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-card>
-          <img src="assets/images/crousel_img2.jpeg" />
-          <div class="contactCommercial">
-            <div style="border-right: 1px solid #dcdcdc">
-              <ion-text>WhatsApp</ion-text>
-              <ion-img
-                class="whatsapp"
-                src="../../../assets/images/whatsapp.png"
-              />
-            </div>
-            <div>
-              <ion-text>Call</ion-text>
-              <ion-icon name="call" class="call"></ion-icon>
-            </div>
-          </div>
-        </ion-card>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-card>
-          <img src="assets/images/crousel_img3.jpeg" />
-          <div class="contactCommercial">
-            <div style="border-right: 1px solid #dcdcdc">
-              <ion-text>WhatsApp</ion-text>
-              <ion-img
-                class="whatsapp"
-                src="../../../assets/images/whatsapp.png"
-              />
-            </div>
-            <div>
-              <ion-text>Call</ion-text>
-              <ion-icon name="call" class="call"></ion-icon>
-            </div>
-          </div>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="assets/images/crousel_img3.jpeg" />
+          <img [src]="image" />
           <div class="contactCommercial">
             <div style="border-right: 1px solid #dcdcdc">
               <ion-text>WhatsApp</ion-text>
@@ -270,105 +165,9 @@
     </ion-card>
 
     <ion-slides [options]="option2" class="stickySlide">
-      <ion-slide>
+      <ion-slide *ngFor="let image of imageUrl">
         <ion-card>
-          <img src="assets/images/crousel_img1.jpeg" />
-          <div class="stickyContentHeight">
-            <div class="dayAndHeart">
-              <div>
-                <ion-label>2 days ago</ion-label>
-                <ion-label class="locationSticky">Abu Dhabi</ion-label>
-              </div>
-
-              <ion-icon class="heart" name="heart-outline"></ion-icon>
-            </div>
-            <p class="adsTitle">Easy to disassemble and install</p>
-            <div class="adsPrice">
-              <ion-label>25000</ion-label>
-              <ion-label class="currency">AED</ion-label>
-            </div>
-          </div>
-          <div class="contactSticky">
-            <div style="border-right: 1px solid #dcdcdc">
-              <ion-icon name="call" class="call"></ion-icon>
-            </div>
-            <div>
-              <ion-img
-                class="whatsapp"
-                src="../../../assets/images/whatsapp.png"
-              />
-            </div>
-          </div>
-        </ion-card>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-card>
-          <img src="assets/images/crousel_img1.jpeg" />
-          <div class="stickyContentHeight">
-            <div class="dayAndHeart">
-              <div>
-                <ion-label>2 days ago</ion-label>
-                <ion-label class="locationSticky">Abu Dhabi</ion-label>
-              </div>
-
-              <ion-icon class="heart" name="heart-outline"></ion-icon>
-            </div>
-            <p class="adsTitle">Easy to disassemble and install</p>
-            <div class="adsPrice">
-              <ion-label>25000</ion-label>
-              <ion-label class="currency">AED</ion-label>
-            </div>
-          </div>
-          <div class="contactSticky">
-            <div style="border-right: 1px solid #dcdcdc">
-              <ion-icon name="call" class="call"></ion-icon>
-            </div>
-            <div>
-              <ion-img
-                class="whatsapp"
-                src="../../../assets/images/whatsapp.png"
-              />
-            </div>
-          </div>
-        </ion-card>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-card>
-          <img src="assets/images/crousel_img1.jpeg" />
-          <div class="stickyContentHeight">
-            <div class="dayAndHeart">
-              <div>
-                <ion-label>2 days ago</ion-label>
-                <ion-label class="locationSticky">Abu Dhabi</ion-label>
-              </div>
-
-              <ion-icon class="heart" name="heart-outline"></ion-icon>
-            </div>
-            <p class="adsTitle">Easy to disassemble and install</p>
-            <div class="adsPrice">
-              <ion-label>25000</ion-label>
-              <ion-label class="currency">AED</ion-label>
-            </div>
-          </div>
-          <div class="contactSticky">
-            <div style="border-right: 1px solid #dcdcdc">
-              <ion-icon name="call" class="call"></ion-icon>
-            </div>
-            <div>
-              <ion-img
-                class="whatsapp"
-                src="../../../assets/images/whatsapp.png"
-              />
-            </div>
-          </div>
-        </ion-card>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-card>
-          <img src="assets/images/crousel_img1.jpeg" />
+          <img [src]="image" />
           <div class="stickyContentHeight">
             <div class="dayAndHeart">
               <div>
@@ -413,37 +212,14 @@
     <!------------------------ SLIDER  ------------------>
 
     <ion-slides
-      [options]="option"
+      [options]="option3"
       style="margin-bottom: 60px"
       id="stickySlider"
     >
-      <ion-slide>
+      <ion-slide *ngFor="let image of imageUrl">
         <div class="adsCrousel">
           <div class="adsBorder">
-            <img class="imgHeight" src="assets/images/crousel_img1.jpeg" />
-            <div class="dayAndHeart">
-              <ion-label>2 days ago</ion-label>
-              <ion-icon name="heart-outline"></ion-icon>
-            </div>
-            <p class="adsTitle">Easy to disassemble and install</p>
-            <div class="adsPrice">
-              <ion-label>2500</ion-label>
-              <ion-label class="currency">AED</ion-label>
-            </div>
-            <div class="adsButton">
-              <div class="callBtn">
-                <ion-icon name="call"></ion-icon>
-              </div>
-              <div class="whatsappBtn">
-                <ion-icon name="logo-whatsapp"></ion-icon>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="adsCrousel">
-          <div class="adsBorder">
-            <img class="imgHeight" src="assets/images/crousel_img1.jpeg" />
+            <img class="imgHeight" [src]="image" />
             <div class="dayAndHeart">
               <ion-label>2 days ago</ion-label>
               <ion-icon name="heart-outline"></ion-icon>
@@ -471,7 +247,7 @@
 
   <div class="commercialTabDisplay" id="commercialTabSection">
     <div class="navigationText">
-      <p class="stickyCatTitle">You have 5 commercial ads</p>
+      <p class="stickyCatTitle">You have 2 commercial ads</p>
     </div>
 
     <!-- tabs scroll code here -->
@@ -490,111 +266,9 @@
 
     <!-- ------------------ Commercial Ads -------------- -->
     <div class="commercialAdsDisplay">
-      <ion-card>
+      <ion-card *ngFor="let images of commercialImageUrl">
         <div>
-          <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
-        </div>
-        <div class="contactCommercial">
-          <div style="border-right: 1px solid #dcdcdc">
-            <ion-icon name="call" class="call"></ion-icon>
-          </div>
-          <div>
-            <ion-img
-              class="whatsapp"
-              src="../../../assets/images/whatsapp.png"
-            />
-          </div>
-        </div>
-      </ion-card>
-
-      <ion-card>
-        <div>
-          <img class="commercialImg" src="assets/images/commerceImg.jpeg" />
-        </div>
-        <div class="contactCommercial">
-          <div style="border-right: 1px solid #dcdcdc">
-            <ion-icon name="call" class="call"></ion-icon>
-          </div>
-          <div>
-            <ion-img
-              class="whatsapp"
-              src="../../../assets/images/whatsapp.png"
-            />
-          </div>
-        </div>
-      </ion-card>
-
-      <ion-card>
-        <div>
-          <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
-        </div>
-        <div class="contactCommercial">
-          <div style="border-right: 1px solid #dcdcdc">
-            <ion-icon name="call" class="call"></ion-icon>
-          </div>
-          <div>
-            <ion-img
-              class="whatsapp"
-              src="../../../assets/images/whatsapp.png"
-            />
-          </div>
-        </div>
-      </ion-card>
-
-      <ion-card>
-        <div>
-          <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
-        </div>
-        <div class="contactCommercial">
-          <div style="border-right: 1px solid #dcdcdc">
-            <ion-icon name="call" class="call"></ion-icon>
-          </div>
-          <div>
-            <ion-img
-              class="whatsapp"
-              src="../../../assets/images/whatsapp.png"
-            />
-          </div>
-        </div>
-      </ion-card>
-
-      <ion-card>
-        <div>
-          <img class="commercialImg" src="assets/images/commerceImg.jpeg" />
-        </div>
-        <div class="contactCommercial">
-          <div style="border-right: 1px solid #dcdcdc">
-            <ion-icon name="call" class="call"></ion-icon>
-          </div>
-          <div>
-            <ion-img
-              class="whatsapp"
-              src="../../../assets/images/whatsapp.png"
-            />
-          </div>
-        </div>
-      </ion-card>
-
-      <ion-card>
-        <div>
-          <img class="commercialImg" src="assets/images/commerceImg2.jpeg" />
-        </div>
-        <div class="contactCommercial">
-          <div style="border-right: 1px solid #dcdcdc">
-            <ion-icon name="call" class="call"></ion-icon>
-          </div>
-          <div>
-            <ion-img
-              class="whatsapp"
-              src="../../../assets/images/whatsapp.png"
-            />
-          </div>
-        </div>
-      </ion-card>
-
-      <ion-card>
-        <div>
-          <img class="commercialImg" src="assets/images/commerceImg.jpeg" />
+          <img class="commercialImg" [src]="images" />
         </div>
         <div class="contactCommercial">
           <div style="border-right: 1px solid #dcdcdc">

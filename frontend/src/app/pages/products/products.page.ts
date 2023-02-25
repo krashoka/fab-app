@@ -10,6 +10,8 @@ import { NavController } from '@ionic/angular';
 export class ProductsPage implements OnInit {
   items:any[] = [];
 
+  imageUrl: string[] = [];
+
   constructor(private router: Router, private navCtrl: NavController) { }
 
   goToCommercialAds() {  

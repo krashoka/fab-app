@@ -12,4 +12,9 @@ export class ApiService {
     console.log("data added :)")
     return this.http.post("http://localhost/fabapp/backend/signup.php", data);
   }
+
+  loginUser(data){
+    console.log("login data send :)")
+    return this.http.post("http://localhost/fabapp/backend/login.php", data);
+  }
 }
