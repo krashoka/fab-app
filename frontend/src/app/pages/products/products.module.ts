@@ -8,12 +8,16 @@ import { ProductsPageRoutingModule } from './products-routing.module';
 
 import { ProductsPage } from './products.page';
 
+import {NavbarPageModule} from '../../components/navbar/navbar.module';
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProductsPageRoutingModule
+    ProductsPageRoutingModule,
+    NavbarPageModule
   ],
   declarations: [ProductsPage]
 })

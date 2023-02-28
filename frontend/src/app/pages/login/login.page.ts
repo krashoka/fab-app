@@ -10,40 +10,44 @@ import { ApiService } from 'src/app/api.service';
 })
 export class LoginPage implements OnInit {
 
-  mobNumber: any;
-  password: any;
-
+  countryCode: any = "973";
+  user_mob: any;
+  user_pwd: any;
+  
   constructor(private router: Router, public _apiService:ApiService,
     private toastCtrl: ToastController,) { }
 
   loginUser(){
-    // console.log(this.mobNumber, this.password);
-    if(this.mobNumber == null){
-      this.errorToast("Please enter Mobile No. !");
-    }else if(this.password == null){
-      this.errorToast("Please enter Password !")
-    }else{
       let data = {
-        mobNumber: this.mobNumber,
-        password: this.password
+        countryCode: this.countryCode,
+        user_mob: this.user_mob,
+        user_pwd: this.user_pwd
       }
   
       this._apiService.loginUser(data).subscribe((res:any)=>{
         // console.log("SuccessMessage: ", res);
-        this.mobNumber="";
-        this.password="";
-        console.log(res.status);
-        if(res.status == "Successful"){
-          this.successToast("Logged in successfully :)");
+        console.log(res);
+        if(res == "success"){
+          this.successToast("Logged in Successfully.");
           this.router.navigate(['home']); 
-        }else if(res.status == "Error"){
-          this.errorToast("Invalid Mobile No. and Password !")
+        }else if(res == "wrongpwd"){
+          this.errorToast("Wrong Password !")
+        }else{
+          this.errorToast("Number not registered!");
         }
         
-      },(error:any) => {
-        console.log("ErrorMessage: ", error)
+      },(er:any) => {
+        console.log("ErrorMessage: ", er)
+        if(er.error.errors.user_mob){
+          if(er.error.errors.user_mob == "The user mob field is required."){
+          this.errorToast("Mobile number is required!");
+          }else if(er.error.errors.user_mob == "The user mob field must be a number."){
+            this.errorToast("Invalid Number!");
+          }
+        }else if(er.error.errors.user_pwd){
+          this.errorToast("Password is required!");
+        }
       })
-    }
     
   }
 

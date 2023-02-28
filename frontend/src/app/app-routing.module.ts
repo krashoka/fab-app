@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'forgot-password',
     pathMatch: 'full'
   },
   {
@@ -54,6 +54,14 @@ const routes: Routes = [
   {
     path: 'commercialads',
     loadChildren: () => import('./pages/commercialads/commercialads.module').then( m => m.CommercialadsPageModule)
+  },
+  {
+    path: 'navbar',
+    loadChildren: () => import('./components/navbar/navbar.module').then( m => m.NavbarPageModule)
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./pages/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   },
 ];
 

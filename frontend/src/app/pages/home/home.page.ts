@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; 
 import { HttpClient} from '@angular/common/http';
-
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-home',
@@ -9,6 +8,9 @@ import { HttpClient} from '@angular/common/http';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  // showCommercial= false;
+  // showHomeContent = true;
 
   imageUrl: string[] = [];
   commercialImageUrl: string[] = [];
@@ -55,18 +57,6 @@ export class HomePage {
   //   return this.sanitizer.bypassSecurityTrustHtml(html);
   // }
 
-  goToCommercialAds() {  
-    this.router.navigate(['commercialads']);  
-  }  
-
-  goToStickyAds() {  
-    this.router.navigate(['products']);  
-  } 
-
-  goToAddNewAd(){
-    this.router.navigate(['add-new-advertisement']);  
-  }
-
 
   option = {
     slidesPerView: 1,
@@ -91,4 +81,16 @@ export class HomePage {
     spaceBetween: 2,
     autoplay:true,
   }
+
+  goToStickyAds() {  
+    this.router.navigate(['products']);  
+  } 
+
+  goToAddNewAd(){
+    this.router.navigate(['add-new-advertisement']);  
+  }
+
+  goToCommercialAds() {  
+    this.router.navigate(['commercialads']);  
+  } 
 }

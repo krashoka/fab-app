@@ -25,11 +25,23 @@
       </div>
 
       <div class="mobNumber">
-        <ion-text class="countryCode">+971</ion-text>
+        <div class="countryCode">
+          <ion-select interface="popover" [(ngModel)]="countryCode">
+            <ion-select-option value="973">+973</ion-select-option>
+            <ion-select-option value="20">+20</ion-select-option>
+            <ion-select-option value="962">+962</ion-select-option>
+            <ion-select-option value="965">+965</ion-select-option>
+            <ion-select-option value="961">+961</ion-select-option>
+            <ion-select-option value="968">+968</ion-select-option>
+            <ion-select-option value="974">+974</ion-select-option>
+            <ion-select-option value="966">+966</ion-select-option>
+            <ion-select-option value="971">+971</ion-select-option>
+          </ion-select>
+        </div>
         <ion-input
-          type="number"
+          type="text"
           placeholder="Enter a mobile number"
-          [(ngModel)]="mobNumber"
+          [(ngModel)]="user_mob"
         ></ion-input>
       </div>
 
@@ -39,8 +51,8 @@
       </div>
       <div class="password">
         <ion-input
-          type="password"
-          [(ngModel)]="password"
+          type="text"
+          [(ngModel)]="user_pwd"
           placeholder="Enter the password"
         ></ion-input>
       </div>

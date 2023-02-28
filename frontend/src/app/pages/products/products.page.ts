@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'; 
 import { NavController } from '@ionic/angular';
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-products',
@@ -12,28 +12,28 @@ export class ProductsPage implements OnInit {
 
   imageUrl: string[] = [];
 
-  constructor(private router: Router, private navCtrl: NavController) { }
+  constructor(private navCtrl: NavController, public http: HttpClient) { 
 
-  goToCommercialAds() {  
-    this.router.navigate(['commercialads']);  
-  }  
+    this.http.get("http://localhost/fabapp/backend/crouselImg.php").subscribe((res: any) => {
+        
+      // console.log("Data fetched successfully: ",res);
+      for(let i=0; i<res.length; i++){
+        this.imageUrl.push('http://localhost/fabapp/crouselimg/' + res[i]);
+      }
 
-  goToHome() {  
-    this.router.navigate(['home']);  
-  } 
-
-  goBack() {
-    this.navCtrl.back();
-  }
-
-  goToAddNewAd(){
-    this.router.navigate(['add-new-advertisement']);  
-  }
+    },(error:any) => {
+      console.log("ErrorMessage: ", error)
+    });
+   }
 
   option = {
     slidesPerView: 2,
     // centeredSlides: true,
     spaceBetween: 4,
+  }
+
+  goBack() {
+    this.navCtrl.back();
   }
 
   ngOnInit() {
