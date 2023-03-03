@@ -8,12 +8,17 @@ import { AddNewAdvertisementPageRoutingModule } from './add-new-advertisement-ro
 
 import { AddNewAdvertisementPage } from './add-new-advertisement.page';
 
+import { PipesModule } from './safe.module';
+import {NavbarPageModule} from '../../../components/navbar/navbar.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AddNewAdvertisementPageRoutingModule
+    PipesModule,
+    AddNewAdvertisementPageRoutingModule,
+    NavbarPageModule
   ],
   declarations: [AddNewAdvertisementPage]
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +9,20 @@ import { Router } from '@angular/router';
 })
 export class AddNewAdvertisementPage implements OnInit {
 
-  constructor(private router: Router) { }
+  categories: any = [];
+
+  constructor(private router: Router, public http: HttpClient) {
+    // **************** For Categories Icons Section *****************
+    this.http.get("http://localhost/fabapp/backend/categoriesIcons.php").subscribe((res: any) => {
+
+      this.categories = res;
+
+      // console.log(res);
+
+    },(error:any) => {
+      console.log("ErrorMessage: ", error)
+    });
+   }
 
   goToCommercialAds() {  
     this.router.navigate(['commercialads']);  

@@ -1,0 +1,53 @@
+<ion-content>
+  <!-- Header for Large screen -->
+
+  <app-navbar class="topNav"></app-navbar>
+  <!-- ---------------------------------- -->
+
+  <ion-card class="advertisement">
+    <ion-label class="adTitle">Add new advertisement</ion-label>
+    <ion-card-content class="cancelAd" (click)="goToHome()">
+      <ion-label>Cancel</ion-label>
+      <ion-icon class="cancelIcon" name="close-outline"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="navigationBar">
+    <div style="background-color: #e30b1c"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- -------- Categories Section -------- -->
+  <div class="adContent">
+    <ion-card class="categories">
+      <div class="categoriesHeader">
+        <ion-label>categories</ion-label>
+        <ion-icon name="search"></ion-icon>
+      </div>
+
+      <div class="grid">
+        <div (click)="goToCategories()" *ngFor="let category of categories">
+          <ion-card class="icons" [innerHTML]="category.ct_icon | safeHtml">
+          </ion-card>
+          <p class="icon_title">{{ category.ct_icon_label }}</p>
+        </div>
+      </div>
+    </ion-card>
+    <div class="adImg">
+      <img src="../../../assets/images/advertisement.jpg" />
+    </div>
+  </div>
+
+  <!-- ------------ FOOTER Section --------- -->
+  <ion-fab
+    slot="fixed"
+    vertical="bottom"
+    horizontal="end"
+    id="floatingChatIcon"
+  >
+    <ion-icon name="chatbubble"></ion-icon>
+  </ion-fab>
+</ion-content>

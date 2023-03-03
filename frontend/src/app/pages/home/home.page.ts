@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
+
 
 @Component({
   selector: 'app-home',
@@ -17,7 +19,8 @@ export class HomePage {
   
   categories: any = [];
 
-  constructor(private router: Router, public http: HttpClient) { 
+  constructor(private router: Router, public http: HttpClient, private storage: Storage) { 
+    this.storage.create();
 
     this.http.get("http://localhost/fabapp/backend/crouselImg.php").subscribe((res: any) => {
         
@@ -46,12 +49,23 @@ export class HomePage {
 
       this.categories = res;
 
-      console.log(res);
+      // console.log(res);
 
     },(error:any) => {
       console.log("ErrorMessage: ", error)
     });
   }
+
+   
+
+
+  // isAuthenticated(): Promise<boolean> {
+  //   return this.storage.get('access_token')
+  //     .then(token => {
+  //       return token ? true : false;
+  //     });
+  // }
+  
 
   // sanitizeHtml(html: string): SafeHtml {
   //   return this.sanitizer.bypassSecurityTrustHtml(html);
@@ -82,12 +96,16 @@ export class HomePage {
     autoplay:true,
   }
 
-  goToStickyAds() {  
-    this.router.navigate(['products']);  
+  goToStickyAds() { 
+    this.router.navigate(['products']);
+   
   } 
 
   goToAddNewAd(){
-    this.router.navigate(['add-new-advertisement']);  
+    this.storage.get('admin').then((value) => {
+      if(value != null) this.router.navigate(['add-new-advertisement']);
+      else this.router.navigate(['login']);
+    }); 
   }
 
   goToCommercialAds() {  

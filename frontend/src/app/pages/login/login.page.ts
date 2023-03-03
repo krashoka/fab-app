@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router'; 
+import { ActivatedRoute, Router} from '@angular/router'; 
 import { ToastController } from '@ionic/angular';
 import { ApiService } from 'src/app/api.service';
+import { NavController } from '@ionic/angular';
+import { Storage } from '@ionic/storage-angular';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -14,8 +17,19 @@ export class LoginPage implements OnInit {
   user_mob: any;
   user_pwd: any;
   
-  constructor(private router: Router, public _apiService:ApiService,
-    private toastCtrl: ToastController,) { }
+  constructor(
+    private router: Router, 
+    public _apiService:ApiService, 
+    private toastCtrl: ToastController,
+    private storage: Storage ) {
+      this.storage.create();
+     }
+
+ 
+
+    ngOnInit() {
+    }
+  
 
   loginUser(){
       let data = {
@@ -25,11 +39,23 @@ export class LoginPage implements OnInit {
       }
   
       this._apiService.loginUser(data).subscribe((res:any)=>{
-        // console.log("SuccessMessage: ", res);
-        console.log(res);
-        if(res == "success"){
-          this.successToast("Logged in Successfully.");
-          this.router.navigate(['home']); 
+        console.log("Message From database: ", res);
+        // console.log(res);
+     
+
+        if(res[1].msg == 'success'){
+          // this.storage.remove("admin");
+          this.storage.set('admin', "99");
+          this.countryCode = "973";
+          this.user_mob = "";
+          this.user_pwd = "";
+          // this.successToast("Logged in Successfully.");
+
+          // this.storage.get('admin').then((value) => {
+          //   console.log('Session value is', value);
+          // });
+          this.router.navigateByUrl('home');
+ 
         }else if(res == "wrongpwd"){
           this.errorToast("Wrong Password !")
         }else{
@@ -49,7 +75,18 @@ export class LoginPage implements OnInit {
         }
       })
     
+
   }
+
+  // isAuthenticated(): Promise<boolean> {
+  //   return this.storage.get('loggedin')
+  //     .then(token => {
+  //       return token ? true : false;
+  //     });
+  // }
+
+
+  
 
   async errorToast(a){
     const toast = await this.toastCtrl.create({
@@ -74,8 +111,5 @@ export class LoginPage implements OnInit {
   goToHome() {  
     this.router.navigate(['home']);  
   } 
-
-  ngOnInit() {
-  }
 
 }

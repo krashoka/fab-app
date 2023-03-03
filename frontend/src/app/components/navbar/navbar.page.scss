@@ -95,7 +95,7 @@ $large-screen: 992px;
   }
 
   .menu:hover,
-  .home {
+  .active {
     font-weight: 700;
     border-bottom: 3px solid #e30b1c;
     border-radius: 3px;
@@ -114,5 +114,6 @@ $large-screen: 992px;
     height: 60px;
     margin-right: 80px;
     padding: 0;
+    cursor: pointer;
   }
 }

@@ -98,20 +98,20 @@ export class ForgotPasswordPage implements OnInit {
 
     this._apiService.resetPassword(data).subscribe((res:any)=>{
       console.log(res);
-      // this.user_mob= res;
-      // this.isInputDisabled = true;
       if(res == "success"){
         this.successToast("Password Updated.");
         this.user_mob="";
         this.countryCode="973";
         this.isInputDisabled = false;
         this.showResetPassword = false;
-        // this.router.navigate(['login']);
+        this.router.navigate(['login']);
       }else this.errorToast("User not found!");
     },(er:any) => {
       console.log(er);
       if(er.error.errors.user_pwd1){
-        this.errorToast("Password is required!");
+        if(er.error.errors.user_pwd1 == 'The user pwd1 field must be between 8 and 16 characters.'){
+          this.errorToast("Password must be between 8 and 16 characters.")
+        }else this.errorToast("Password is required!");
       }else if(er.error.errors.user_pwd2){
         this.errorToast("Confirm password didn't match!");
       }else{

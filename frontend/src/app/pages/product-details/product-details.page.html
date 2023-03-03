@@ -1,46 +1,7 @@
 <ion-content>
   <!-- Header for Large screen -->
 
-  <ion-card class="topNav">
-    <ion-card class="innerTopNav">
-      <ion-img
-        class="langImg"
-        src="../../../assets/images/arabicLang.png"
-      ></ion-img>
-      <div class="topMenu">
-        <div>
-          <div>
-            <ion-icon name="person-circle"></ion-icon>
-          </div>
-          <p class="topMenu_icon_title">My account</p>
-        </div>
-        <div>
-          <div>
-            <ion-icon name="notifications"></ion-icon>
-          </div>
-          <p class="topMenu_icon_title">Notification</p>
-        </div>
-      </div>
-    </ion-card>
-
-    <ion-card class="mainNav">
-      <div class="logo">
-        <ion-img
-          class="websiteTitle"
-          src="../../../assets/images/fabLogo.png"
-          (click)="goToHome()"
-        ></ion-img>
-      </div>
-      <div class="menu" (click)="goToHome()">Home Page</div>
-      <div class="menu" (click)="goToStickyAds()">Sticky Ads</div>
-      <div class="menu" style="width: 160px" (click)="goToCommercialAds()">
-        Commercials Ads
-      </div>
-      <div>
-        <div class="addNewAds" (click)="goToAddNewAd()">Add Your Ad Now</div>
-      </div>
-    </ion-card>
-  </ion-card>
+  <app-navbar class="topNav"></app-navbar>
   <!-- ------------------------------------------------ -->
 
   <!-- --------- Product Image and Price for Mobile ----------- -->

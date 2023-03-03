@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PersonalInfoPageRoutingModule } from './personal-info-routing.module';
 
 import { PersonalInfoPage } from './personal-info.page';
+import {NavbarPageModule} from '../../../components/navbar/navbar.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PersonalInfoPageRoutingModule
+    PersonalInfoPageRoutingModule,
+    NavbarPageModule
   ],
   declarations: [PersonalInfoPage]
 })

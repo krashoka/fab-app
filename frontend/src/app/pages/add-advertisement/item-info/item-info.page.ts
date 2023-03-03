@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
-import 'select2';
+// import 'select2';
 // import '../../../assets/select2.css';
 
 @Component({
@@ -47,12 +47,12 @@ export class ItemInfoPage implements OnInit {
   
 
   ngOnInit() {
-    $(document).ready(() => {
-      $('#mySelect').select2({
-        placeholder: 'Select an option',
-        data: this.data.map((option) => ({ id: option.id, text: option.text }))
-      });
-    });
+    // $(document).ready(() => {
+    //   $('#mySelect').select2({
+    //     placeholder: 'Select an option',
+    //     data: this.data.map((option) => ({ id: option.id, text: option.text }))
+    //   });
+    // });
     
     // $(document).ready(() => {
     //   $('#mySelect').select2({

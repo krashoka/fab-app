@@ -32,4 +32,9 @@ export class ApiService {
     console.log("reseting successful :)")
     return this.http.post("https://specbits.com/class2/fab/setpassword", data);
   }
+
+  logout(data){
+    console.log("reseting successful :)")
+    return this.http.post("https://specbits.com/class2/fab/logout", data);
+  }
 }
