@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-myaccount',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyaccountPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  goToProfile(){
+    this.router.navigate(['profile']);
+  }
 
   ngOnInit() {
   }
