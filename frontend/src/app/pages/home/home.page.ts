@@ -45,11 +45,11 @@ export class HomePage {
 
 
     // **************** For Categories Icons Section *****************
-    this.http.get("http://localhost/fabapp/backend/categoriesIcons.php").subscribe((res: any) => {
+    this.http.get("https://specbits.com/class2/fab/index").subscribe((res: any) => {
 
       this.categories = res;
 
-      // console.log(res);
+      console.log(res);
 
     },(error:any) => {
       console.log("ErrorMessage: ", error)

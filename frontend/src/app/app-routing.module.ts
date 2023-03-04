@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'myaccount',
+    redirectTo: 'add-new-advertisement',
     pathMatch: 'full'
   },
   {
@@ -77,7 +77,7 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./pages/myaccount/profile/profile.module').then( m => m.ProfilePageModule)
-  },
+  }
 ];
 
 @NgModule({

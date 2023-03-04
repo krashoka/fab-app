@@ -10,6 +10,8 @@ import { AddNewAdvertisementPage } from './add-new-advertisement.page';
 
 import { PipesModule } from './safe.module';
 import {NavbarPageModule} from '../../../components/navbar/navbar.module';
+import { DataService } from 'src/app/data.service';
+
 
 @NgModule({
   imports: [
@@ -20,6 +22,7 @@ import {NavbarPageModule} from '../../../components/navbar/navbar.module';
     AddNewAdvertisementPageRoutingModule,
     NavbarPageModule
   ],
-  declarations: [AddNewAdvertisementPage]
+  declarations: [AddNewAdvertisementPage],
+  providers: [DataService]
 })
 export class AddNewAdvertisementPageModule {}

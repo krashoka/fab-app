@@ -24,19 +24,13 @@
   <div class="adContent">
     <ion-card class="categories">
       <div class="categoriesHeader">
-        <ion-label>Cars</ion-label>
+        <ion-label>{{categoryTitle}}</ion-label>
         <ion-icon name="search"></ion-icon>
       </div>
 
-      <div class="subCategories" (click)="goToItemInfo()">
-        <div>
-          <ion-text>Auto</ion-text>
-          <ion-icon name="chevron-forward"></ion-icon>
-        </div>
-      </div>
-      <div class="subCategories">
-        <div>
-          <ion-text>Auto Services</ion-text>
+      <div class="subCategories" *ngFor="let category of categories">
+        <div (click)="goToCategories(category.cid, category.title)">
+          <ion-text>{{category.title}}</ion-text>
           <ion-icon name="chevron-forward"></ion-icon>
         </div>
       </div>

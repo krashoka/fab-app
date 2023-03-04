@@ -30,19 +30,15 @@
       </ion-card-header>
 
       <ion-card-content class="selectOption">
-        <ion-text>Size of realestate</ion-text>
-        <ion-input
-          type="number"
-          placeholder="Size of realestate"
-          class="inputAdTitle"
-        />
-        <ion-text>Location</ion-text>
-        <ion-input type="text" placeholder="Location" class="inputAdTitle" />
-
-        <!-- <ion-text>Bedrooms</ion-text>
-        <div class="select2style">
-          <select id="mySelect" placeholder="Select an option"></select>
-        </div> -->
+        <div *ngFor="let item of items">
+          <div [innerHTML]="item | safeHtml"></div>
+          <!-- <ion-text>Size of realestate</ion-text>
+          <ion-input
+            type="number"
+            placeholder="Size of realestate"
+            class="inputAdTitle"
+          /> -->
+        </div>
 
         <ion-button
           class="nextBtn"

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { PipesModule } from './safe.module';
 
 import { ItemInfoPageRoutingModule } from './item-info-routing.module';
 
@@ -14,6 +15,7 @@ import {NavbarPageModule} from '../../../components/navbar/navbar.module';
     CommonModule,
     FormsModule,
     IonicModule,
+    PipesModule,
     ItemInfoPageRoutingModule,
     NavbarPageModule
   ],

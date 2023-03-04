@@ -328,6 +328,12 @@ $extra-large-screen: 1200px;
   //   width: 400px !important;
   // }
 
+  .inputCheck {
+    width: 100%;
+    border: 1px solid red;
+    font-size: 18px;
+  }
+
   .nextBtn {
     text-transform: none;
     height: 50px;
